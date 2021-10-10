@@ -22,6 +22,8 @@ class SellStock
 				int minPriceUntilToday = stockValues[0];
 				for(int i = 1; i < stockValues.Length; i++)
 				{
+                    if(stockValues[i] < minPriceUntilToday)
+						minPriceUntilToday = stockValues[i];
  					if(stockValues[i] - minPriceUntilToday > maxProfitAtThisDay)
 						maxProfitAtThisDay = stockValues[i] - minPriceUntilToday;
 				}
