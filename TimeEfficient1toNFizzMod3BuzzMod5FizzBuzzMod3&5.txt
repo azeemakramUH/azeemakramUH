@@ -1,0 +1,42 @@
+//Write a program that takes as input an integer, N, and prints
+//all the integers from 1 to N, replacing numbers divisible by 3 with “fizz”, numbers divisible by
+//5 with “buzz”, and numbers divisible by both with “fizz buzz”.
+
+using System;
+
+class PrimitiveDivisor {
+
+
+static void Main(string[] args)
+	{
+		int N = 47;
+		int 3counter = 3;
+		int 5counter = 5;
+		for(int i = 1; i<=N; i++)
+		{
+3counter = 3counter - 1;
+5counter = 5counter - 1;	
+if(3counter == 0)
+{
+	
+	if(5counter == 0)
+		3counter = 5counter = 0;
+		Console.WriteLine("Fizz Buzz");
+	else
+		3counter = 0
+		Console.WriteLine("Fizz");
+}
+else 
+{
+    if(5counter == 0)
+	5counter = 5;
+	Console.WriteLine("Buzz");
+    else
+	Console.WriteLine("{0}",i);
+}
+
+}
+
+}	
+	
+	
