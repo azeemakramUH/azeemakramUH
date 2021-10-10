@@ -10,33 +10,39 @@ class PrimitiveDivisor {
 static void Main(string[] args)
 	{
 		int N = 47;
-		int 3counter = 3;
-		int 5counter = 5;
+		int _3counter = 3;
+		int _5counter = 5;
 		for(int i = 1; i<=N; i++)
 		{
-3counter = 3counter - 1;
-5counter = 5counter - 1;	
-if(3counter == 0)
+_3counter = _3counter - 1;
+_5counter = _5counter - 1;	
+if(_3counter == 0)
 {
 	
-	if(5counter == 0)
-		3counter = 5counter = 0;
+	if(_5counter == 0)
+		{
+            _3counter = 3;
+            _5counter = 5;
 		Console.WriteLine("Fizz Buzz");
+        }
 	else
-		3counter = 0
+		_3counter = 3;
 		Console.WriteLine("Fizz");
 }
 else 
 {
-    if(5counter == 0)
-	5counter = 5;
+    if(_5counter == 0)
+    {
+	_5counter = 5;
 	Console.WriteLine("Buzz");
+    }
     else
 	Console.WriteLine("{0}",i);
 }
 
 }
 
+}
 }	
 	
 	
