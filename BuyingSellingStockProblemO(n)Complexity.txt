@@ -1,0 +1,31 @@
+//The stock value varies everyday. It has a Value S at a particular day.
+//Given a range of days, what is the maximum profit that can be earned by buying and selling the stock.
+
+//Example range: 11 5 8 6 7 9
+//Answer: Buying at day 2 (5) selling at day 6 (9) = 4
+
+
+
+
+using System;
+
+class SellStock
+{
+	static void Main(string[] args) 
+	{
+			//Assume input string = {11,5,8,6,7,9}
+			int[] stockValues = {3,11,5,8,6,7,9};
+			int maxProfitAtThisDay = 0;
+
+			if(stockValues.Length > 0)
+			{
+				int minPriceUntilToday = stockValues[0];
+				for(int i = 1; i < stockValues.Length; i++)
+				{
+ 					if(stockValues[i] - minPriceUntilToday > maxProfitAtThisDay)
+						maxProfitAtThisDay = stockValues[i] - minPriceUntilToday;
+				}
+			}
+			Console.WriteLine("The maximum stock value for this input range is : {0}", maxProfitAtThisDay);
+	}
+}
