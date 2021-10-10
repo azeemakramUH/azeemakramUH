@@ -1,3 +1,57 @@
 \\Write a program that takes as input an integer, N, and prints
 \\all the integers from 1 to N, replacing numbers divisible by 3 with “fizz”, numbers divisible by
 \\5 with “buzz”, and numbers divisible by both with “fizz buzz”.
+
+using System;
+
+class PrimitiveDivisor{
+
+enum DivisibleBy
+{
+Three,
+Five,
+Both,
+None
+}
+
+public DivisibleBy GetDivisibility(int N)
+{
+if(N%3 == 0)
+{
+	if(N%5 == 0)
+		return DivisibleBy.Both;
+	Else
+		return DivisibleBy.Three;
+}
+Else if(N % 5 ==0)
+	return DivisibleBy.Five;
+Else
+	return None;
+}
+
+static void Main(string[] args)
+	{
+		int N = 16;
+		for(int i = 1; i<=N; i++)
+		{	
+			switch(GetDivisibility(N))
+			{
+				case DivisibleBy.Three:
+					Console.WriteLine("Fizz");
+					break;
+				case DivisibleBy.Five:
+					Console.WriteLine("Buzz");
+					break;
+				case DivisibleBy.Both:
+					Console.WriteLine("Fizz Buzz");
+					break;
+				default:
+					Console.WriteLine("{0}",N);
+					break;
+			}
+		}
+	}
+
+}	
+	
+	
