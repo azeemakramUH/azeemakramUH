@@ -1,3 +1,14 @@
+//Writing the program in notepad with whatever knowledge I have of C# as of now
+
+//The stock value varies everyday. It has a Value S at a particular day.
+//Given a range of days, what is the maximum profit that can be earned by buying and selling the stock.
+
+//Example range: 11 5 8 6 7 9
+//Answer: Buying at day 2 (5) selling at day 6 (9) = 4
+
+
+
+
 using System;
 
 class SellStock
