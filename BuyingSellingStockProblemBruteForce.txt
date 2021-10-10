@@ -1,8 +1,32 @@
 //Writing the program in notepad with whatever knowledge I have of C# as of now
 
-The stock value varies everyday. It has a Value S at a particular day.
-Given a range of days, what is the maximum profit that can be earned by buying and selling the stock.
+//The stock value varies everyday. It has a Value S at a particular day.
+//Given a range of days, what is the maximum profit that can be earned by buying and selling the stock.
 
-Example range: 11 5 8 6 7 9
-Answer: Buying at day 2 (5) selling at day 6 (9) = 4
+//Example range: 11 5 8 6 7 9
+//Answer: Buying at day 2 (5) selling at day 6 (9) = 4
 
+
+
+Using System
+
+Class SellStock
+{
+	Static Void Main() {
+			//Assume input string = {11,5,8,6,7,9}
+			int() stockValues = {11,5,8,6,7,9}
+int profit = 0;
+if(stockValues.Count > 0)
+{
+for(i = 1; i <= stockValues.Count; i++)
+{
+  for (j = i+1; j<= stockValues.Count; j++)
+	{
+	if(stockValue(j) - stockValue(i)) > profit
+		profit = stockValue(j) - stockValue(i);
+	}
+}
+}
+Console.WriteLine("The maximum stock value for this input range is : {0}", profit);
+}
+				
